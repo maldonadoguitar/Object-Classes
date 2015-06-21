@@ -11,7 +11,7 @@
 
 @interface BankAccount: NSObject
 
-- (void)balance:(CGFloat)bal;
+- (void)setBalance:(CGFloat)bal;
 - (void)setWithdrawl:(CGFloat)wit;
 - (void)setDeposit:(CGFloat)dep;
 
@@ -26,13 +26,31 @@
 
 - (void) printBalance {
     NSLog(@"%f",balance);
+
 }
 - (void) printWithdrawl {
     NSLog(@"%f-%f",balance,withdrawl);
+    
 }
 - (void) printDeposit {
     NSLog(@"%f-%f",balance,deposit);
 }
+
+ -(void) setWithdrawl: (CGFloat) wit {
+        withdrawl = wit;
+ }
+
+-(void) setDeposit: (CGFloat) dep {
+         deposit = dep;
+}
+
+
+-(void) setBalance: (CGFloat) bal {
+    balance = bal;
+}
+    
+    
+
     
 @end
 
@@ -47,13 +65,26 @@
 
 @implementation Patron{
     
-  
+    NSString name;
+    NSInteger accountNum;
+    NSString pocket;
 
 }
 
+
+- (void) printName {
+    NSLog(@"%s",name);
+    balance = bal;
+
+}
+
+
+
+
+
+
+
 @end
-
-
 
 
 
