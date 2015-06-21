@@ -19,11 +19,11 @@
 @implementation BankAccount{
     
     CGFloat balance;
+    NSArray *patrons;
 }
 
 - (void) printBalance {
     NSLog(@"%f",balance);
-
 }
 
 - (void)makeDeposit:(CGFloat)amount {
@@ -48,6 +48,8 @@
 
 - (void)setName:(NSString *)person;
 - (void)setAccountNum:(NSInteger)acc;
+
+- (void)setBankAccount:(BankAccount *)bankAccount;
 - (void)setPocket:(NSInteger)poc;
 
 @end
@@ -96,10 +98,10 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        
+        NSInteger balance = 5555;
         BankAccount *myBankAccount = [[BankAccount alloc] init];
         
-        [myBankAccount setBalance:5000];
+        [myBankAccount setBalance:balance];
         
         
         
@@ -107,7 +109,7 @@ int main(int argc, const char * argv[]) {
         Patron *daddywarbucks = [[Patron alloc] init];
         
         [daddywarbucks setName: @"Warbucks"];
-        
+        [daddywarbucks setBankAccount:myBankAccount];
         
     }
     return 0;
