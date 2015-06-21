@@ -47,9 +47,8 @@
 
 @implementation Patron{
     
-    NSString
-    
-    
+  
+
 }
 
 @end
