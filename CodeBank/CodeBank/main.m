@@ -97,10 +97,16 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         
-        BankAccount *MyBankAccount = [[BankAccount alloc] init];
+        BankAccount *myBankAccount = [[BankAccount alloc] init];
         
-        [BankAccount setBalance 100,000,000];
-       
+        [myBankAccount setBalance:5000];
+        
+        
+        
+        
+        Patron *daddywarbucks = [[Patron alloc] init];
+        
+        [daddywarbucks setName: @"Warbucks"];
         
         
     }
