@@ -12,38 +12,27 @@
 @interface BankAccount: NSObject
 
 - (void)setBalance:(CGFloat)bal;
-- (void)setWithdrawl:(CGFloat)wit;
-- (void)setDeposit:(CGFloat)dep;
+
 
 @end
 
 @implementation BankAccount{
     
     CGFloat balance;
-    CGFloat withdrawl;
-    CGFloat deposit;
 }
 
 - (void) printBalance {
     NSLog(@"%f",balance);
 
 }
-- (void) printWithdrawl {
-    NSLog(@"%f-%f",balance,withdrawl);
-    
-}
-- (void) printDeposit {
-    NSLog(@"%f-%f",balance,deposit);
+
+- (void)makeDeposit:(CGFloat)amount {
+    balance = balance + amount;
 }
 
- -(void) setWithdrawl: (CGFloat) wit {
-        withdrawl = wit;
- }
-
--(void) setDeposit: (CGFloat) dep {
-         deposit = dep;
+-(void)makeWithdrawl: (CGFloat)amount{
+    balance = balance - amount;
 }
-
 
 -(void) setBalance: (CGFloat) bal {
     balance = bal;
@@ -57,32 +46,48 @@
 
 @interface Patron: NSObject
 
-- (void)name:(NSString *)person;
-- (void)accountNum:(NSInteger)acc;
-- (void)pocket:(NSInteger)poc;
+- (void)setName:(NSString *)person;
+- (void)setAccountNum:(NSInteger)acc;
+- (void)setPocket:(NSInteger)poc;
 
 @end
 
 @implementation Patron{
     
-    NSString name;
+    NSString *name;
     NSInteger accountNum;
-    NSString pocket;
+    NSInteger pocket;
 
 }
-
 
 - (void) printName {
-    NSLog(@"%s",name);
-    balance = bal;
-
+    NSLog(@"%@",name);
 }
 
 
+- (void) printAccount {
+    NSLog(@"%ld",accountNum);
+}
 
 
+- (void) printPocket {
+    NSLog(@"%ld",pocket);
+}
 
 
+-(void) setName: (NSString *) person {
+    name = person;
+}
+
+
+-(void) setAccountNum:(NSInteger) acc {
+    accountNum = acc;
+}
+
+
+-(void) setPocket: (NSInteger) poc {
+    pocket = poc;
+}
 
 @end
 
@@ -90,6 +95,12 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        
+        
+        BankAccount *MyBankAccount = [[BankAccount alloc] init];
+        
+        [BankAccount setBalance: ;
+       
         
         
     }
