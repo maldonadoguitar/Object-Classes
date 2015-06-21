@@ -106,7 +106,12 @@ int main(int argc, const char * argv[]) {
         
         
         
+<<<<<<< HEAD
         Patron *daddywarbucks = [[Patron alloc] init];
+=======
+        [BankAccount setBalance: ;
+       
+>>>>>>> 27da5d170c53a953ed98267684c86f3134f9fc4a
         
         [daddywarbucks setName: @"Warbucks"];
         [daddywarbucks setBankAccount:myBankAccount];
